@@ -1,0 +1,18 @@
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 100% of the viewport height */
+}
+
+/* Diagram container */
+.diagram-container {
+    text-align: center;
+}
+
+/* Your diagram styles */
+.diagram {
+    font-family: monospace;
+    white-space: pre;
+    /* Add any other styles you want for your diagram */
+}
