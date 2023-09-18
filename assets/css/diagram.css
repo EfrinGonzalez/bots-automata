@@ -1,18 +1,20 @@
-.center-container {
+/* styles.css */
+
+/* Center the container both horizontally and vertically */
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* 100% of the viewport height */
+    /* Optional: set a fixed width for the container */
+    width: 50%; /* Adjust this value as needed */
+    margin: 0 auto; /* Horizontally center the container */
+    /* Add any other container styles here */
 }
 
-/* Diagram container */
-.diagram-container {
-    text-align: center;
-}
-
-/* Your diagram styles */
-.diagram {
+/* Style the diagram */
+.text-diagram {
     font-family: monospace;
     white-space: pre;
-    /* Add any other styles you want for your diagram */
+    text-align: center; /* Center the text within the diagram */
+
 }

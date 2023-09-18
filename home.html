@@ -12,7 +12,8 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/diagram.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 	<body class="is-preload">
 
 		<!-- Wrapper -->
@@ -38,8 +39,8 @@
 						<nav>
 							<ul>
 								<li><a href="#intro">Intro</a></li>								
-								<li><a href="#market">The Market</a></li>
-								<li><a href="#solution">The solution</a></li>
+								<li><a href="#market">Market</a></li>
+								<li><a href="#solution">Solution</a></li>
 								<li><a href="#about">About us</a></li>
 								<li><a href="#join">Join us</a></li>
 								<!--<li><a href="#dokumenter">Dokumenter</a></li>-->
@@ -82,10 +83,18 @@
 								The financial markets are evolving rapidly, and investors are increasingly seeking more efficient and profitable ways to navigate the complexities of trading securities. 
 								The automated trading industry presents an exciting opportunity for growth and innovation. Market trends indicate a rising demand for automated trading tools and solutions. 
 								As technology continues to shape the financial landscape, Automata is ideally positioned to capitalize on this opportunity.
-								
+
+									
 							</p>
 
-						
+							<p align="justify">
+								In the contemporary financial landscape, algorithmic (algo) trading has risen to prominence, fundamentally reshaping how stocks and other assets are traded. 
+								The proliferation of advanced algorithms and high-frequency trading firms has led to increased market efficiency and liquidity. 
+								Algo trading strategies, ranging from quantitative models to machine learning-driven approaches, now dominate a substantial portion of trading volume. 
+								While it enhances market dynamics, it also presents challenges related to risk management and regulatory oversight. As technology continues to evolve, 
+								algo trading is poised to remain a driving force in shaping the future of financial markets, offering both opportunities and complexities for investors and market participants alike.
+							
+							</p>
 
 						</article>
 
@@ -94,7 +103,9 @@
 						<article id="solution">
 							<h2 class="major">The Solution</h2>
 
-							<p>We do algoritmic trading.</p>						
+							<p>We do algoritmic trading in a low frequency semi-automatic way. This is to ensure low risk and high quality at our growing stage.
+							   We aim to do high frequency trading in the future, when we can ensure the same level of low risk and high quality in a fully automated way.
+							</p>						
 							
 							
 							<p align="justify">
@@ -104,6 +115,49 @@
 								It emphasizes risk control and compliance with regulatory standards while providing a user-friendly interface for monitoring and intervention. 
 								This efficient and data-driven approach aims to optimize trading outcomes for investors.
 							</p>
+							<br/>
+							<p>The following diagram give an overview on how the technical model is built: </p>						
+							
+
+<div class="container">
+<div class="text-diagram">
+<!--
++------------------+
+|   Client-Side    |
+| (User Interface) |
++------------------+
+			|
+			v-->
++-------------------+        +-----------------+
+|    Multicloud     |        |  Azure/AWS      |
+|   Environment     |        |   Services      |
++-------------------+        +-----------------+
+		|                        |
+		v                        v
++-------------------+     +-----------------+
+|  Data Sources     |     | Interactive     |
+| (Market Feeds,    |     | Brokers Platform|
+|  Historical Data) |     |                 |
++-------------------+     +-----------------+
+		|                        |
+		v                        v
++-------------------+     +-----------------+
+|  Trading Actions  |<--->|   Trade Results |
+| (Algorithmic      |     | (Execution and  |
+| Strategies with   |     |   Performance)  |
+| Python & AI)      |     |                 |
++-------------------+     +-----------------+
+		|                        |
+		v                        v
++-------------------+     +-----------------+
+|     Reporting     |<--->|   Trade Reports |
++-------------------+     +-----------------+
+</div>
+</div>
+
+<br/>
+<br/>
+							
 							<p align="justify">
 								The system's flow can be summarized as follows:	<br/>	
 								This system's objective is to maximize efficiency and profitability while maintaining rigorous risk management and regulatory compliance. <br/>							
@@ -141,22 +195,22 @@
 									Meet Our Experts</h2>
 
 									<p align="justify">
-										Efrin González is our Founder CEO but also the CTO due to his Senior Software Development Engineer expertise in large-size Nordic Enterprises as well as medium-size companies. 
-										He has been trainned in the best Engineering Universitites in Europe and is also graduated from the EXECUTIVE PROGRAMME IN ALGORITHMIC TRADING - EPAT®. 
+										Efrin González is our Founder CEO and also the CTO due to his Senior Software Development Engineer expertise in large-size Nordic Enterprises as well as medium-size companies. 
+										He has been trained in the best Engineering Universitites in Europe and is also graduated from the EXECUTIVE PROGRAMME IN ALGORITHMIC TRADING - EPAT® from India. 
 										You can know more about him in his <a href="https://www.linkedin.com/in/efringonzalez/" target="_blank">LinkedIn Profile</a>. 
 										<br/><br/>	
-										We are able to justify our presence in the financial market due to the acquaintance of engineering as well as algorithmics trading. <br/> 	<br/> 
-										Just a brief note about what we mean: <br/> 
+										We are able to justify our presence in the financial market due to the acquaintance of engineering as well as algorithmics trading. <br/> 	<br/> 							
+									
 										Algorithmic trading is the process of trading using algorithms where buy and sell signals are generated and/or executed by a computer code. 
 										Devoid of human emotion and bias, it is a way more efficient and scalable process. It allows a trader to focus on developing their trading strategies, 
 										whereas the backtesting, execution and risk management can be taken care of by the system based on the defined human inputs.
-										<br/>	<br/>	
+										<br/><br/>	
 										The Executive Programme in Algorithmic Trading (EPAT) by QuantInsti is designed for professionals looking to grow in the domain of algorithmic trading and quant finance. 
 										This algorithmic trading course focuses on the complete spectrum of quant trading including statistics, programming, market microstructure, data analysis, machine learning, portfolio optimization and risk management.
 									
 										<!--Our team comprises a seasoned software engineer, data scientists, and financial experts with a collective mission to redefine trading excellence. 
-									With a history of developing proprietary algorithms, our experts have undergone rigorous testing and optimization, ensuring that our clients achieve maximum profitability.
-									-->
+										With a history of developing proprietary algorithms, our experts have undergone rigorous testing and optimization, ensuring that our clients achieve maximum profitability.
+										-->
 								</p>
 
 							<!--	<lu style="list-style-type:none">
@@ -170,13 +224,37 @@
 							</article>
 						<!-- Contact -->
 							<article id="join">
-								<h2 class="major">Unlock Your Trading Potential <br/> with Automata</h2>
+								<h2 class="major">Unlock Your <br/>Trading Potential <br/> with Automata</h2>
 								<p align="justify">
 									At Automata, we believe in driving innovation, empowering traders, and creating a more efficient, profitable trading landscape. 
 									Our unique blend of software engineering and financial expertise positions us as the ideal partner for investors seeking a smarter way to trade.
 									We invite you to embark on this journey with us and experience the future of trading. Contact us today to explore how Automata can transform your trading strategies and open new doors to profitability.
 									<br/>
 									<br/>
+									<h3>We can handle your portfolio</h2>
+										<p align="justify">
+											If you want to invest in the stock market, we are here to help you. We distribute the earnings on your money by 50% you (the investor) and 
+											50% us (the company). 									 
+										</p>
+
+										<div style="max-width: 250; margin: 0 auto;">
+											<canvas id="chartportfolio" width="250" height="250"></canvas>
+										  </div>
+										  
+										
+									<br/>
+									<br/>
+									<h3>Acquiring a percentage of the company</h2>
+										<p align="justify">At this stage we are offering 20% in equity to investors. This means that 80% of the company is not to be sold at this stage.
+											The minimum an investor can acquire in equity is 1% of the companies value at the price of that point in time when the deal is done.  
+										</p>
+										
+									<div style="max-width: 250; margin: 0 auto;">
+										<canvas id="chartequity" width="250" height="250"></canvas>
+									  </div>
+									<br/>
+									<br/>
+
 									Contact Information:<br/>
 									Email: bots.automata@gmail.com<br/>
 								<!--
@@ -533,6 +611,9 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			
+			<script src="assets/js/chartequity.js"></script>
+			<script src="assets/js/chartportfolio.js"></script>
 
 	</body>
 </html>
